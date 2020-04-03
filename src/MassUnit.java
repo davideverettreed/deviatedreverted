@@ -24,6 +24,10 @@ public enum MassUnit {
         public double toPounds(double kilograms) {return (kilograms*1000.0*1000.0)/(MILLIGRAMSPERPOUND);}
     },
 
+    METRICTONS {
+
+    },
+
     OUNCES {
         public long toMilligrams(double ounces) {return Double.valueOf(ounces * (MILLIGRAMSPERPOUND/16.0)).longValue();}
         public double toGrams(double ounces) {return ounces * (MILLIGRAMSPERPOUND/1000.0/16.0);}
@@ -38,6 +42,18 @@ public enum MassUnit {
         public double toKilograms(double pounds) {return pounds * (MILLIGRAMSPERPOUND / 1000.0 / 1000.0);}
         public double toOunces(double pounds) {return pounds * 16.0;}
         public double toPounds(double pounds) {return pounds;}
+    },
+
+    TONS {
+
+    },
+
+    ELEPHANTS {
+
+    },
+
+    USSGERALDRFORDSAIRCRAFTCARRIERS {
+
     };
 
 
@@ -59,6 +75,10 @@ public enum MassUnit {
         throw new AbstractMethodError();
     }
 
+    public double toMetricTons(double d){
+        throw new AbstractMethodError();
+    }
+
     public double toOunces(double d){
         throw new AbstractMethodError();
     }
@@ -67,7 +87,17 @@ public enum MassUnit {
         throw new AbstractMethodError();
     }
 
+    public double toTons(double d){
+        throw new AbstractMethodError();
+    }
 
+    public double toElephants(double d){
+        throw new AbstractMethodError();
+    }
+
+    public double toAircraftCarriers(double d){
+        throw new AbstractMethodError();
+    }
 
 
 }
